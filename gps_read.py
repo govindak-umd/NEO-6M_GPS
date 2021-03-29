@@ -5,7 +5,14 @@ Attributes:
 """
 import serial
 
-ser = serial.Serial('/dev/ttyUSB0')
+# For Linux systems
+
+# ser = serial.Serial('/dev/ttyUSB0')
+
+# For Windows
+
+ser = serial.Serial('COM11')
+
 ser.baudrate = 9600
 
 f= open("gps_data.txt","w+")
@@ -55,7 +62,10 @@ try:
             tim_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
             f.write(str(tim_data) + " \n")
             print(tim_data)
-            
+        
+        else:
+
+            print('Waiting for Lock .. ')
 # Save when the user exits
 
 except KeyboardInterrupt:
