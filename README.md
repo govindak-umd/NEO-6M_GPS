@@ -11,7 +11,7 @@ The connections are laid out here:
 | GND | GND  | 
 | 5V | Vin | 
 
-THe connections are made as follows:
+The connections are made as follows:
 
 <p align="center">
   <img height="500" src="Images/my_connection.jpeg">
@@ -28,6 +28,12 @@ Install the following on your Arduino IDE by going to **Tools > Manage Libraries
 
 - Arduino BNO055
 - Adafruit Unified Sensor
+- TinyGPS ++
+	- To install this, click [this](https://github.com/mikalhart/TinyGPSPlus/archive/master.zip) and download
+	- Unzip
+	- Rename to TinyGPSPlus
+	- Move it to the location with all the libraries. In my case it is *~/Arduino/libraries*
+	- Re-open IDE
 
 Install Pyserial
 
@@ -41,3 +47,11 @@ After verifying, make this port an executable by entering:
 
     sudo chmod a+rw /dev/ttyUSB0 
 
+
+## ARDUINO C CODE LOOKUP TABLE
+
+
+| Serial Number| Arduino Code Folder  | Function | 
+| ------------- | ------------- | ------------- |
+| 1  | GPS_READ_TEST | To access the GPS Data and print it in NMEA format | 
+| 1  | GPS_LONGITUDE_LATITUDE_TEST | To access the GPS Data and print it in Longitudes and Latitudes | 
