@@ -8,44 +8,57 @@ import serial
 ser = serial.Serial('/dev/ttyUSB0')
 ser.baudrate = 9600
 
-while ser.isOpen():
+f= open("gps_data.txt","w+")
 
-    # Convert from ascii encoding
+try:
 
-    imu_data = ser.readline().decode("ascii")
+    while ser.isOpen():
 
-    data_code = imu_data[0:3]
+        # Convert from ascii encoding
 
-    # Getting the Lattitude data and split it at the right
-    # parsing points
+        imu_data = ser.readline().decode("ascii")
 
-    if data_code == 'Lat':
+        data_code = imu_data[0:3]
 
-        lat_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
-        print(lat_data)
+        # Getting the Lattitude data and split it at the right
+        # parsing points
 
-    # Getting the Longitude data and split it at the right
-    # parsing points
-    
-    if data_code == 'Lon':
+        if data_code == 'Lat':
 
-        lon_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
-        print(lon_data)
+            lat_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
+            f.write(str(lat_data)+' ')
+            print(lat_data)
 
-    # Getting the Altitude data and split it at the right
-    # parsing points
-    
-    if data_code == 'Alt':
+        # Getting the Longitude data and split it at the right
+        # parsing points
+        
+        if data_code == 'Lon':
 
-        alt_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
-        print(alt_data)
-    
-    # Getting the TimeStamp data and split it at the right
-    # parsing points
-    
-    if data_code == 'Tim':
+            lon_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
+            f.write(str(lon_data)+' ')
+            print(lon_data)
 
-        tim_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
-        print(tim_data)
+        # Getting the Altitude data and split it at the right
+        # parsing points
+        
+        if data_code == 'Alt':
 
-    print('--------')
+            alt_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
+            f.write(str(alt_data)+' ')
+            print(alt_data)
+        
+        # Getting the TimeStamp data and split it at the right
+        # parsing points
+        
+        if data_code == 'Tim':
+
+            tim_data = ((imu_data.split(': ')[1]).split('\r\n'))[0]
+            f.write(str(tim_data) + " \n")
+            print(tim_data)
+            
+# Save when the user exits
+
+except KeyboardInterrupt:
+
+    print('File closed and saved upon user request')
+    f.close()

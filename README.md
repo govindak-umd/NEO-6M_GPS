@@ -1,5 +1,10 @@
 # NEO-6M_GPS
+
 This repository records the development and setup of the NEO-6M GPS Module.
+
+## Author
+
+Govind Ajith Kumar
 
 
 The connections are laid out here:
@@ -55,6 +60,13 @@ After verifying, make this port an executable by entering:
 | ------------- | ------------- | ------------- |
 | 1  | GPS_READ_TEST | To access the GPS Data and print it in NMEA format | 
 | 2  | GPS_LONGITUDE_LATITUDE_TEST | To access the GPS Data and print it in Longitudes and Latitudes | 
+
+## PYTHON CODE LOOKUP TABLE
+
+| Serial Number| Code  | Function | Arduino Code Uploaded |
+| ------------- | ------------- | ------------- |------------- |
+| 1 |  gps_read.py| To access the GPS Data through pyserial, print and save it in a text file |GPS_LONGITUDE_LATITUDE_TEST |
+
 
 The GPS outpus will be in NMEA Codes. The meanings of the NMEA Codes are as follows:
 
