@@ -54,4 +54,12 @@ After verifying, make this port an executable by entering:
 | Serial Number| Arduino Code Folder  | Function | 
 | ------------- | ------------- | ------------- |
 | 1  | GPS_READ_TEST | To access the GPS Data and print it in NMEA format | 
-| 1  | GPS_LONGITUDE_LATITUDE_TEST | To access the GPS Data and print it in Longitudes and Latitudes | 
+| 2  | GPS_LONGITUDE_LATITUDE_TEST | To access the GPS Data and print it in Longitudes and Latitudes | 
+
+The GPS outpus will be in NMEA Codes. The meanings of the NMEA Codes are as follows:
+
+**$GPGSA** – GPS DOP and active satellites
+**$GPGSV** – Detailed GPS satellite information
+**$GPGLL** – Geographic Latitude and Longitude
+**$GPRMC** – Essential GPS pvt (position, velocity, time) data
+**$GPVTG** – Velocity made good
