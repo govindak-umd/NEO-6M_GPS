@@ -76,7 +76,7 @@ command
 
 ## PYTHON CODE LOOKUP TABLE
 
-| Serial Number| Code  | Function | Arduino Code Uploaded |
+| Serial Number| Code  | Function | Arduino Code Flashed |
 | ------------- | ------------- | ------------- |------------- |
 | 1 |  gps_read.py| To access the GPS Data through pyserial, print and save it in a text file |GPS_LONGITUDE_LATITUDE_TEST |
 | 2 |  global2xy.py| To convert the GPS Coordinates to Cartesian coordinates ans save into text file | - |
