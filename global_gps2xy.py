@@ -1,12 +1,13 @@
 import numpy as np
+from utils import test_name
 
 # Read the original gps file coordinates
 
-orig_gps_file = open("gps_data.txt", "r")
+orig_gps_file = open(test_name+"gps_data.txt", "r")
 
 # Open a new file that stores the converted file coordinates
 
-converted_gps_file = open("converted_gps_data.txt", "w+")
+converted_gps_file = open(test_name + "gps_to_xy" + ".txt", "w+")
 
 
 def readAndSave(lat=None, lon=None, init_lat=None, init_lon=None, ):

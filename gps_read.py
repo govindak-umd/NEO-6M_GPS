@@ -4,7 +4,7 @@ Attributes:
     ser (TYPE): Serial
 """
 import serial
-
+from utils import test_name
 
 # For Linux systems
 
@@ -12,11 +12,11 @@ import serial
 
 # For Windows
 
-ser = serial.Serial('COM11')
+ser = serial.Serial('COM13')
 
 ser.baudrate = 9600
 
-f= open("gps_data.txt","w+")
+f= open(test_name +"gps_data.txt","w+")
 
 try:
 
