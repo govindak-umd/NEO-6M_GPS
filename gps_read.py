@@ -5,6 +5,7 @@ Attributes:
 """
 import serial
 
+
 # For Linux systems
 
 # ser = serial.Serial('/dev/ttyUSB0')
