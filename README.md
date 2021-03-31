@@ -79,7 +79,9 @@ command
 | Serial Number| Code  | Function | Arduino Code Flashed |
 | ------------- | ------------- | ------------- |------------- |
 | 1 |  gps_read.py| To access the GPS Data through pyserial, print and save it in a text file |GPS_LONGITUDE_LATITUDE_TEST |
-| 2 |  global2xy.py| To convert the GPS Coordinates to Cartesian coordinates ans save into text file | - |
+| 2 |  global_gps2xy.py| To convert the GPS Coordinates to Cartesian coordinates ans save into text file | - |
+| 3 | plot_gps_xy.py | To plot the cartesian coordinates obtained from the previous code | - |
+| 4 | utils.py | Contains utility variables | - |
 
 The GPS output will be in NMEA Codes. The meanings of the NMEA Codes are as follows:
 
